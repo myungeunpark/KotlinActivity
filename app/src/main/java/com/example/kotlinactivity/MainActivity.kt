@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    val REQUEST_CODE = 100
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age", 20)
             intent.putExtra("school", "Fallon Middle School")
             intent.putExtra("score", 100)
-            startActivityForResult(intent, 100)
+            intent.putExtra("source", R.drawable.face1)
+            startActivityForResult(intent, REQUEST_CODE)
 
         }
     }
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(requestCode == 100 && resultCode == Activity.RESULT_OK){
+        if(requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK){
 
             textView.text = data?.getStringExtra("name")
             textView.append("\n + ${data?.getIntExtra("age", 0)}")
