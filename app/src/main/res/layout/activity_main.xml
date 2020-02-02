@@ -12,12 +12,22 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start New Activity "
+        android:text="Start Profile Activity "
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 </LinearLayout>
